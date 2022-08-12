@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to categories_path
     else
-      render :new
+      redirect_to new_category_path
     end
   end
 
