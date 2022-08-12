@@ -1,8 +1,14 @@
-<div class="front">
-<h1>Budget App</h1>
+<div class="home">
+  <div class="title">
+    <h1 class="home_name">Budget App</h1>
+  </div>
 
   <div class="access">
-      <%= link_to 'Sign up', new_user_registration_path, class: "access" %>
-      <%= link_to 'Log in', new_user_session_path, class: "access" %>
+      <div class="login">
+        <%= link_to 'LOG IN', new_user_session_path, class: "user_btn" %>
+      </div>
+      <div class="sign_up">
+        <%= link_to 'SIGN UP', new_user_registration_path, class: "user_btn" %>
+      </div>
   </div>
 </div>
