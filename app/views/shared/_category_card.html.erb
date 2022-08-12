@@ -1,14 +1,18 @@
 <div class="category">
   <div class="category_card">
-    <div class="icon_holder">
+    <div class="icon_card">
       <%= image_tag(category.icon, class: "icon") if category.icon.attached? %>
     </div>
-    <div class= "category_name">
+    <div class= "category_info">
       <%= category.name %>
     </div>
   </div>
 
   <div class="category_total">
-    $ <%= category.transactions.sum(:amount) %>
+    <%
+=begin%>
+ $ <%= category.sum %>  
+<%
+=end%>
   </div>
 </div>

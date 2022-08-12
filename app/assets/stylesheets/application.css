@@ -133,3 +133,74 @@ body {
   font-family: "novabold", sans-serif;
 }
 
+.category_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 92.6vh;
+}
+
+.category {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 0 8px 0 rgba(20, 20, 20, 0.2), 0 0 8px 0 rgba(36, 32, 32, 0.05);
+}
+
+.category_card {
+  display: flex;
+}
+
+.icon_card {
+  margin: 5px;
+}
+
+.icon {
+  width: 80px;
+}
+
+.category_info {
+  margin: 20px 30px;
+}
+
+.btn_category,
+.add_category {
+  background-color: #5fb523;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-family: "novabold", sans-serif;
+}
+
+.btn_category:hover,
+.add_category:hover {
+  background-color: #3778c2;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  height: 92.6vh;
+}
+
+.transction_items {
+  height: 100%;
+  padding: 10px
+}
+
+.items_info {
+  display: flex;
+  box-shadow: 1px 0 8px 0 rgba(20, 20, 20, 0.2), 0 0 8px 0 rgba(36, 32, 32, 0.05);
+  margin: 5px;
+}
+
+.items_info div,
+.transction_items div {
+  width: 50%;
+  text-align: center;
+}
+
+.add_transaction {
+  align-items: end;
+}

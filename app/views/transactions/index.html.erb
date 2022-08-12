@@ -9,14 +9,13 @@
         <div>Item name</div>
         <div>amount</div>
       </div>
-      <% @category.transactions.order("created_at DESC").each do |transactions| %>
-         <div class="transaction_item">
+      <% @category.each do |transaction| %>
+         <div class="transaction_items">
           <div><%= transaction.name %></div>
-          <div><%= transaction.amount %></div>
         </div>
       <% end %>
     </div>
-    <%= link_to new_category_purchase_path(category) do %>
+    <%= link_to new_category_transaction_path(category) do %>
       <button class='add_transaction btn_category'>New Transaction</button>
     <% end %>
   <% end %>

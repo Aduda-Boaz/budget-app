@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @categories = Category.includes(icon_attachemnt: :blob).where(user_id: current_user.id)
+    @categories = Category.includes(icon_attachment: :blob).where(user_id: current_user.id)
   end
 
   def new
@@ -12,16 +12,17 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.user_id = current_user.id
-    if @category.save
-      redirect_to categories_path
+
+    if category.save
+      redirect_to categories_path, notice: 'Category was successfully created.'
     else
-      redirect_to new_category_path
+      redirect_to new_category_path, notice: 'Category was not created.'
     end
   end
 
   private
 
   def category_params
-    params.require(:category).permit(:name, :icon)
+    params.require(:categories).permit(:name, :icon)
   end
 end
