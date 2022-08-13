@@ -15,7 +15,7 @@ This is a mobile budget app built with rails and PostgreSQL. Users can easily tr
 
 ## Live Demo
 
- > [Click here](https://rails-capstone-budget-app.herokuapp.com/)
+ > [Click here](https://salty-escarpment-44866.herokuapp.com/)
 
 ## Getting Started
 
