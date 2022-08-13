@@ -1,24 +1,48 @@
-# README
+# Budget-App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a mobile budget app built with rails and PostgreSQL. Users can easily truck their transactions.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby
+- Ruby on rails
+- postgresql
+- CSS
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get a local copy up and running follow these simple example steps:
 
-* Database creation
+- Go to the folder where you want to store the project, and clone the repository using the following SSH
+- SSH: git@github.com:Aduda-Boaz/budget-app.git
+- Nevigate to the root of the project from the terminal, run the following command
 
-* Database initialization
+ > bundle install
 
-* How to run the test suite
+ > rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+ > access to <http://localhost:3000/> in your browser
 
-* Deployment instructions
+## Author
 
-* ...
+👤 Boaz Aduda
+
+- GitHub: [@githubhandle](https://github.com/Aduda-Boaz)
+- Twitter: [@twitterhandle](https://twitter.com/BoazAduda)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/boaz-aduda/)
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=Aduda-Boaz&show_icons=true&locale=en&theme=dark" alt="Aduda-Boaz" /></p>
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

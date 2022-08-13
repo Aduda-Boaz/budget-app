@@ -63,7 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_160649) do
   create_table "transactions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "name"
-    t.string "amount", default: "0.0"
+    t.string "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_transactions_on_user_id"
