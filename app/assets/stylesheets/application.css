@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,16 +14,6 @@
 
 body {
   background-color: #d1d8e6;
-}
-
-@font-face {
-  src: url(fonts/ProximaNovaLight.ttf);
-  font-family: 'novalight';
-}
-
-@font-face {
-  src: url(fonts/ProximaNovaSemibold.ttf);
-  font-family: 'novabold';
 }
 
 .home {
