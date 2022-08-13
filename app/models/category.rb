@@ -7,6 +7,10 @@ class Category < ApplicationRecord
   validates :icon, presence: true
 
   def sum_total
-    transactions.sum(:amount)
+    total = 0
+    Transaction.where(category_id: id).each do |transaction|
+      total += transaction.amount
+    end
+    total
   end
 end
