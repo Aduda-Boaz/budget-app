@@ -11,10 +11,10 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    transaction = Transaction.new(transaction_params)
-    transaction.user_id = current_user.id
+    @transaction = Transaction.new(transaction_params)
+    @transaction.user_id = current_user.id
 
-    if transaction.save
+    if @transaction.save
       redirect_to category_transactions_path(params[:category_id])
     else
       redirect_to new_category_transaction_path(params[:category_id])
