@@ -13,7 +13,7 @@
       </div>
       <div class="select_category">
         <%= f.label "select the category(s)", class: "category_header"%>
-        <%= f.label "Press ctrl to select multiple", class: "category_info"%>
+        <%= f.label "Press ctrl to select multiple", class: "category_detail"%>
         <%= f.collection_select :category_ids, Category.all, :id, :name, {multiple: true, class: "input"} %>
       </div>
     </div>
