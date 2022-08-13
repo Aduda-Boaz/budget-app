@@ -9,9 +9,10 @@
         <div>Item name</div>
         <div>amount</div>
       </div>
-      <% @category.each do |transaction| %>
-         <div class="transaction_items">
-          <div><%= transaction.name %></div>
+      <% category.transactions.order("created_at DESC").each do |purchase| %>
+        <div class="transaction">
+          <div><%= purchase.name %></div>
+          <div><%= purchase.amount %></div>
         </div>
       <% end %>
     </div>

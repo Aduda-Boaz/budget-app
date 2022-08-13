@@ -20,7 +20,13 @@ class CategoriesController < ApplicationController
     end
   end
 
-  private
+  def destroy
+    if @category.destroy
+      redirect_to categories_path, notice: 'Category was successfully deleted.'
+    else
+      redirect_to categories_path, notice: 'Category was not deleted.'
+    end
+  end
 
   def category_params
     params.require(:category).permit(:name, :icon)

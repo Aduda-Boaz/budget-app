@@ -7,7 +7,7 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
-    @category = Category.where(params[:category_id])
+    @category = Category.where(user_id: current_user)
   end
 
   def create
@@ -15,8 +15,10 @@ class TransactionsController < ApplicationController
     @transaction.user_id = current_user.id
 
     if @transaction.save
-      redirect_to category_transactions_path(params[:category_id])
+      flash[:notice] = 'Transaction was successfully created.'
+      redirect_to category_transactions_path
     else
+      flash[:error] = 'Transaction was not successfully created.'
       redirect_to new_category_transaction_path(params[:category_id])
     end
   end
@@ -24,6 +26,6 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:name, :amount, category_id: [])
+    params.require(:transaction).permit(:name, :amount)
   end
 end

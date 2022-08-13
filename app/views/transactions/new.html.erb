@@ -14,7 +14,7 @@
       <div class="select_category">
         <%= f.label "select the category(s)", class: "category_header"%>
         <%= f.label "Press ctrl to select multiple", class: "category_detail"%>
-        <%= f.collection_select :category_ids, Category.all, :id, :name, {multiple: true, class: "input"} %>
+        <%= f.collection_select :category_ids, @category.order(:name), :id, :name, { class: "select", multiple: true }%>
       </div>
     </div>
 
