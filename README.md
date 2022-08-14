@@ -9,9 +9,6 @@ This is a mobile budget app built with rails and PostgreSQL. Users can easily tr
 - postgresql
 - CSS
 
-## Video presentation
-
- > [Click here](https://www.loom.com/share/a1dd7a2d035d40e0b7d29bda9fc9d4b0?t=4)
 
 ## Live Demo
 
