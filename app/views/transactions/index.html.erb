@@ -1,0 +1,23 @@
+<%= render partial: "shared/navbar", locals: { location: 'TRANSACTIONS'} %>
+
+<div class="transactions">
+  <% @category.each do |category| %>
+    <%= render partial: "shared/category_card", locals: { category: category }%>
+
+    <div class="transction_items">
+      <div class="items_info">
+        <div>Item name</div>
+        <div>amount</div>
+      </div>
+      <% category.transactions.order("created_at DESC").each do |purchase| %>
+        <div class="transaction">
+          <div><%= purchase.name %></div>
+          <div><%= purchase.amount %></div>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to new_category_transaction_path(category) do %>
+      <button class='add_transaction btn_category'>New Transaction</button>
+    <% end %>
+  <% end %>
+</div>

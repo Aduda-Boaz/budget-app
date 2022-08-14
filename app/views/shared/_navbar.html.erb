@@ -1,0 +1,27 @@
+<div class="navbar">
+  <div class="main">
+    <% if user_signed_in? %>
+      <%= link_to categories_path do %>
+        <span class="back_icon"> < </span>
+        <% end %>
+      <% else %>
+      <%= link_to root_path do %>
+        <span class="back_icon"> < </span>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="page"><%= location %></div>
+
+  <% if user_signed_in? %>
+    <div class="main">
+      <%= button_to destroy_user_session_path, method: :delete, class: "log_out" do %>
+        <span class="log_out_icon"> log out </span>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="image">
+      <%= image_tag("cash.png", class: "money") %>
+    </div>
+    <% end %>
+</div>
